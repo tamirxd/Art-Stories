@@ -1,9 +1,9 @@
 {
-  "name": "portfolio-site",
+  "name": "art_stories",
   "version": "1.0.0",
-  "description": "My Portfolio site",
+  "description": "Art Stories Website",
   "main": "index.js",
-  "homepage": "https://tamirxd.github.io/portfoliosite",
+  "homepage": "https://tamirxd.github.io/art_stories",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css --recursive",
     "deploy": "gh-pages -d dist"
