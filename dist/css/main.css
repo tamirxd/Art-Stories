@@ -10,7 +10,7 @@
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: #000;
+  background: red;
   transition: all 0.5s ease-out;
 }
 .menu-btn.close {
@@ -50,7 +50,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #5b5b5b;
+  background: #00ace6;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -59,7 +59,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu-branding {
-  background: #686868;
+  background: #00bfff;
   transition: all 0.5s ease-out;
   transform: translate3d(0, 100%, 0);
   transition: all 0.5s ease-out;
@@ -70,20 +70,23 @@
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(../img/portrait.jpg);
+  background: url(../img/portrait-circle1.jpg);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: auto;
   border-radius: 50%;
-  border: solid 3px #5c9ead;
-  background-size: cover;
+  border: solid 3px #ffff00;
 }
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
   transition: all 0.5s ease-out;
 }
+
 .menu .nav-item.show {
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #5c9ead;
+  color: #ffff00;
 }
 .menu .nav-link {
   display: inline-block;
@@ -97,7 +100,22 @@
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-  color: #5c9ead;
+  color: #ffff00;
+}
+
+.menu .nav-link-project {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.menu .nav-link-project:hover {
+  color: #ffff00;
 }
 
 .nav-item:nth-child(1) {
@@ -132,9 +150,10 @@ body {
   line-height: 1.5;
 }
 body#bg-img {
-  background-image: url("../img/background-night1.jpg");
+  background-image: url("../img/background-edit2.jpg");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
+  text-align: center;
 }
 body#bg-img:after {
   content: "";
@@ -162,7 +181,7 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(109, 109, 109, 0.5);
+  background: rgba(255, 238, 0, 0.5);
 }
 
 a {
@@ -177,13 +196,17 @@ header {
 }
 
 .text-secondary {
-  color: #5c9ead;
+  color: red;
+}
+
+.text-primary {
+  color: #00bfff;
 }
 
 main {
   padding: 4rem;
   min-height: calc(100vh);
-  background: rgba(109, 109, 109, 0.5);
+  /*background: rgba(10, 194, 255, 0.5); */
 }
 main .icons {
   margin-top: 1rem;
@@ -192,10 +215,9 @@ main .icons a {
   padding: 0.4rem;
 }
 main .icons a:hover {
-  color: #5c9ead;
+  color: #ffff00;
   transition: all 0.5s ease-out;
 }
-
 main#home,
 main#contact {
   overflow: hidden;
@@ -221,13 +243,13 @@ main#contact h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #5c9ead 3px solid;
+  border: #ffff00 3px solid;
 }
 .about-info .bio {
   display: block;
-  box-shadow: 0px 0px 100px 1px rgba(91, 91, 91, 0.4);
+  box-shadow: 0px 0px 100px 1px rgba(0, 172, 230, 0.4);
   /* change to alter the effect*/
-  background: rgba(104, 104, 104, 0.1);
+  background: rgba(0, 191, 255, 0.1);
   grid-area: bio;
   font-size: 1.5rem;
   font-weight: 600;
@@ -242,9 +264,9 @@ main#contact h1 {
   grid-area: job3;
 }
 .about-info .job {
-  background: rgba(91, 91, 91, 0.9);
+  background: rgba(0, 172, 230, 0.9);
   padding: 0.5rem;
-  border-bottom: #5c9ead 5px solid;
+  border-bottom: #ffff00 5px solid;
 }
 
 .projects {
@@ -257,7 +279,25 @@ main#contact h1 {
   border: 3px #fff solid;
 }
 .projects img:hover {
-  border-color: #5c9ead;
+  border-color: #ffff00;
+  opacity: 0.95;
+}
+
+.projects-item {
+  display: block;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.projects-item img {
+  width: 50%;
+  height: 75%;
+  border: 3px #fff solid;
+}
+
+.projects-item img:hover {
+  border-color: #ffff00;
   opacity: 0.95;
 }
 
@@ -269,7 +309,7 @@ main#contact h1 {
   margin-top: 1rem;
 }
 .boxes div {
-  background: rgba(91, 91, 91, 0.6);
+  background: rgba(0, 172, 230, 0.6);
   font-size: 1.5rem;
   border: 3px #fff solid;
   padding: 1.5rem 2.5rem;
@@ -279,7 +319,7 @@ main#contact h1 {
 .boxes div:hover {
   cursor: pointer;
   padding: 1rem 2rem;
-  background: #5c9ead;
+  background: #ffff00;
   color: #000;
 }
 .boxes div:hover span {
@@ -291,7 +331,7 @@ main#contact h1 {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.5rem;
   font-size: 3rem;
-  color: #5c9ead;
+  color: #ffff00;
   position: absolute;
   padding: 0.5rem 0.5rem;
   align-items: center;
@@ -314,8 +354,12 @@ main#contact h1 {
 .btn:hover,
 .btn-dark:hover,
 .btn-light:hover {
-  background: #5c9ead;
+  background: #ffff00;
   color: #000;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .btn-dark {
@@ -324,50 +368,46 @@ main#contact h1 {
 }
 
 .btn-light {
-  background: #e8e8e8;
+  background: white;
   color: #333;
 }
 
 #main-footer {
   text-align: center;
-  padding: 1rem;
-  background: #000;
+  background: #00bfff;
   color: #fff;
-  height: 60px;
-  border-top: 0.15rem solid #5c9ead;
+  height: 40px;
+  border-top: 0.15rem solid #ffff00;
   bottom: 0;
 }
 
 .contact-footer {
-  border-bottom: 0.15rem solid #5c9ead;
-}
-
-.footer-text {
-  padding-right: 11rem;
-}
-
-.footer-icons {
-  float: left;
-}
-
-.footer-icons a {
-  padding: 0.4rem 0.4rem 0 0.4rem;
-}
-
-.footer-icons a:hover {
-  color: #5c9ead;
-  transition: all 0.5s ease-out;
+  border-bottom: 0.15rem solid #ffff00;
 }
 
 @media screen and (min-width: 1171) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-item img {
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid;
   }
 }
 
 @media screen and (min-width: 769) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-link-project {
+    display: none !important;
   }
 }
 
@@ -405,7 +445,9 @@ main#contact h1 {
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url(../img/portrait_small.jpg);
+    background: url(../img/portrait-circle.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
     width: 150px;
     height: 150px;
   }
@@ -418,15 +460,15 @@ main#contact h1 {
       "job3";
     grid-template-columns: 1fr;
   }
-
-  .sapiens-logo {
-    margin-left: 50rem;
-  }
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
   .technologies {
     font-size: 2rem;
+  }
+
+  .nav-link-project {
+    display: none !important;
   }
 }
 
@@ -436,5 +478,9 @@ main#contact h1 {
   }
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .nav-link-project {
+    display: none !important;
   }
 }
