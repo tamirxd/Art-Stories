@@ -165,6 +165,11 @@ body#bg-img:after {
   z-index: -1;
 }
 
+body #home {
+  overflow-y: hidden;
+  height: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -221,6 +226,8 @@ main .icons a:hover {
 main#home,
 main#contact {
   overflow: hidden;
+  height: 100%;
+  margin: 0;
 }
 main#home ::-webkit-scrollbar,
 main#contact ::-webkit-scrollbar {
@@ -370,6 +377,7 @@ main#contact h1 {
 .btn-light {
   background: white;
   color: #333;
+  border: 0.15rem solid #00bfff;
 }
 
 #main-footer {
@@ -383,6 +391,10 @@ main#contact h1 {
 
 .contact-footer {
   border-bottom: 0.15rem solid #ffff00;
+}
+
+.contact-social-media {
+  color: #000;
 }
 
 @media screen and (min-width: 1171) {
