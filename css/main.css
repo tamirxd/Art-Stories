@@ -397,6 +397,18 @@ main#contact h1 {
   color: #000;
 }
 
+.footer-icons {
+  margin: 0 0 0 2rem;
+}
+
+.footer-icons:hover {
+  color: black;
+}
+
+.project-icon:hover {
+  color: black;
+}
+
 @media screen and (min-width: 1171) {
   main {
     align-items: center;
