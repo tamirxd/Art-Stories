@@ -68,9 +68,9 @@
   transform: translate3d(0, 0, 0);
 }
 .menu-branding .portrait {
-  width: 250px;
-  height: 250px;
-  background: url(../img/portrait-circle1.jpg);
+  width: 300px;
+  height: 300px;
+  background: url(../img/portrait-pc.png);
   background-repeat: no-repeat;
   background-color: white;
   background-size: auto;
@@ -81,7 +81,6 @@
   transform: translate3d(600px, 0, 0);
   transition: all 0.5s ease-out;
 }
-
 .menu .nav-item.show {
   transform: translate3d(0, 0, 0);
 }
@@ -102,7 +101,6 @@
 .menu .nav-link:hover {
   color: #ffff00;
 }
-
 .menu .nav-link-project {
   display: inline-block;
   position: relative;
@@ -117,11 +115,9 @@
 .menu .nav-link-project:hover {
   color: #ffff00;
 }
-
 .nav-item:nth-child(1) {
   transition-delay: 0.1s;
 }
-
 .nav-item:nth-child(2) {
   transition-delay: 0.2s;
 }
@@ -149,6 +145,7 @@ body {
   color: #000;
   line-height: 1.5;
 }
+
 body#bg-img {
   background-image: url("../img/background-edit2.jpg");
   background-attachment: fixed;
@@ -164,12 +161,10 @@ body#bg-img:after {
   width: 100%;
   z-index: -1;
 }
-
 body #home {
   overflow-y: hidden;
   height: 100%;
 }
-
 h1,
 h2,
 h3 {
@@ -183,35 +178,40 @@ h3.lg-heading {
 }
 h1.sm-heading,
 h2.sm-heading,
-h3.sm-heading {
+h3.sm-heading,
+p.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
   background: rgba(255, 238, 0, 0.5);
 }
 
+p.sm-heading{
+  color: #000;
+  font-size: 1rem;
+}
 a {
   color: #fff;
   text-decoration: none;
 }
-
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
-
 .text-secondary {
   color: red;
 }
-
 .text-primary {
   color: #00bfff;
 }
 
 main {
   padding: 4rem;
-  min-height: calc(100vh);
-  /*background: rgba(10, 194, 255, 0.5); */
+  min-height: calc(100vh); text-primary {
+  color: #00bfff;
+}
+
+main
 }
 main .icons {
   margin-top: 1rem;
@@ -237,13 +237,13 @@ main#home h1,
 main#contact h1 {
   margin-top: 20vh;
 }
-
 .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
     "job1 job2 job3";
+
   grid-template-columns: repeat(3, 1fr);
 }
 .about-info .bio-img {
@@ -255,7 +255,8 @@ main#contact h1 {
 .about-info .bio {
   display: block;
   box-shadow: 0px 0px 100px 1px rgba(0, 172, 230, 0.4);
-  /* change to alter the effect*/
+  grid-area: bioimage;
+  margin:
   background: rgba(0, 191, 255, 0.1);
   grid-area: bio;
   font-size: 1.5rem;
@@ -275,7 +276,6 @@ main#contact h1 {
   padding: 0.5rem;
   border-bottom: #ffff00 5px solid;
 }
-
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -289,25 +289,21 @@ main#contact h1 {
   border-color: #ffff00;
   opacity: 0.95;
 }
-
 .projects-item {
   display: block;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
   align-items: center;
 }
-
 .projects-item img {
   width: 50%;
   height: 75%;
   border: 3px #fff solid;
 }
-
 .projects-item img:hover {
   border-color: #ffff00;
   opacity: 0.95;
 }
-
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -315,6 +311,7 @@ main#contact h1 {
   align-items: center;
   margin-top: 1rem;
 }
+
 .boxes div {
   background: rgba(0, 172, 230, 0.6);
   font-size: 1.5rem;
@@ -332,7 +329,6 @@ main#contact h1 {
 .boxes div:hover span {
   color: #000;
 }
-
 .technologies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -349,7 +345,6 @@ main#contact h1 {
   padding: 1.5rem 2.5rem;
   margin-bottom: 3rem;
 }
-
 .btn,
 .btn-dark,
 .btn-light {
@@ -364,22 +359,18 @@ main#contact h1 {
   background: #ffff00;
   color: #000;
 }
-
 .align-right {
   text-align: right;
 }
-
 .btn-dark {
   background: black;
   color: #fff;
 }
-
 .btn-light {
   background: white;
   color: #333;
   border: 0.15rem solid #00bfff;
 }
-
 #main-footer {
   text-align: center;
   background: #00bfff;
@@ -388,11 +379,9 @@ main#contact h1 {
   border-top: 0.15rem solid #ffff00;
   bottom: 0;
 }
-
 .contact-footer {
   border-bottom: 0.15rem solid #ffff00;
 }
-
 .contact-social-media {
   color: #000;
 }
@@ -417,24 +406,20 @@ main#contact h1 {
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .projects-item img {
     width: 50%;
     height: 50%;
     border: 3px #fff solid;
   }
 }
-
 @media screen and (min-width: 769) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .nav-link-project {
     display: none !important;
   }
 }
-
 @media screen and (max-width: 768px) {
   main {
     padding: 2rem;
@@ -469,7 +454,7 @@ main#contact h1 {
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url(../img/portrait-circle1.jpg);
+    background: url(../img/portrait-mobile.png);
     background-repeat: no-repeat;
     background-size: auto;
     width: 150px;
@@ -490,12 +475,10 @@ main#contact h1 {
   .technologies {
     font-size: 2rem;
   }
-
   .nav-link-project {
     display: none !important;
   }
 }
-
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
@@ -503,7 +486,6 @@ main#contact h1 {
   .projects {
     grid-template-columns: 1fr;
   }
-
   .nav-link-project {
     display: none !important;
   }
