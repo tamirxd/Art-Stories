@@ -147,7 +147,7 @@ body {
 }
 
 body#bg-img {
-  background-image: url("/dist/img/backround-new.png");
+  background-image: url("../img/backround-new.png");
   background-attachment: fixed;
   background-size: contain;
   text-align: center;
