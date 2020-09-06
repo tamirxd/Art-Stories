@@ -147,7 +147,7 @@ body {
 }
 
 body#bg-img {
-  background-image: url("../img/background-edit2.jpg");
+  background-image: url("/dist/img/backround-new.png");
   background-attachment: fixed;
   background-size: contain;
   text-align: center;
@@ -182,7 +182,7 @@ h3.sm-heading,
 p.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(255, 238, 0, 0.5);
+  /*background: rgba(255, 238, 0, 0.5);*/
 }
 
 p.sm-heading{
@@ -250,6 +250,7 @@ main#contact h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
+  background-color: white;
   border: #ffff00 3px solid;
 }
 .about-info .bio {
@@ -396,6 +397,16 @@ main#contact h1 {
 
 .project-icon:hover {
   color: black;
+}
+
+div.index-logo {
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: block;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 1171) {
